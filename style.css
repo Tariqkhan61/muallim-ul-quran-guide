@@ -1,0 +1,622 @@
+/* ===== Color Scheme =====
+   Primary: Deep Royal Blue #1A2B4C
+   Accent: Gold #C5A059
+   Quiz Green: #E8F5E9 (light) / #2E7D32 (dark green)
+   Background: Cream #FDFBF7
+   Text: Dark Grey #333333
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #FDFBF7;
+  color: #333333;
+  line-height: 1.8;
+  font-size: 18px; /* Bara base font */
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background-color: #1A2B4C;
+  color: #fff;
+  padding: 35px 0;
+  text-align: center;
+  border-bottom: 5px solid #C5A059;
+}
+
+.site-header h1 {
+  font-size: 2.4rem;
+  font-weight: 800; /* Bold */
+  letter-spacing: 1px;
+}
+
+.tagline {
+  color: #C5A059;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* ===== Quiz Card (GREEN) ===== */
+.quiz-card {
+  background: #E8F5E9; /* Halka green background */
+  border: 3px solid #2E7D32; /* Gehra green border */
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(46, 125, 50, 0.18);
+  padding: 40px;
+  margin: 40px 0;
+}
+
+.quiz-card h2 {
+  color: #1B5E20; /* Gehra green heading */
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  border-right: 5px solid #2E7D32;
+  padding-right: 14px;
+}
+
+.quiz-desc {
+  color: #2E7D32;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 28px;
+}
+
+/* ===== Question Block ===== */
+.question-block {
+  margin-bottom: 28px;
+  padding-bottom: 22px;
+  border-bottom: 2px dashed #A5D6A7;
+}
+
+.question-block:last-child {
+  border-bottom: none;
+}
+
+.question-text {
+  font-weight: 800; /* Bold sawal */
+  color: #1B5E20;
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+/* ===== Options ===== */
+.option {
+  display: block;
+  width: 100%;
+  text-align: right;
+  background: #ffffff;
+  border: 2px solid #A5D6A7;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1B5E20;
+  font-family: inherit;
+}
+
+.option:hover {
+  border-color: #2E7D32;
+  background: #F1F8E9;
+  transform: translateX(-4px);
+}
+
+.option.selected {
+  border-color: #1B5E20;
+  background: #C8E6C9;
+}
+
+/* Sahi jawab */
+.option.correct {
+  border-color: #1B5E20;
+  background: #66BB6A;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* Ghalat jawab */
+.option.wrong {
+  border-color: #C62828;
+  background: #FFCDD2;
+  color: #B71C1C;
+  font-weight: 800;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  background-color: #1B5E20;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background-color: #C5A059;
+  color: #1A2B4C;
+}
+
+/* ===== Result ===== */
+#result-container {
+  text-align: center;
+  padding: 25px 0;
+}
+
+#result-container h3 {
+  color: #1B5E20;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+#score-text {
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin-bottom: 22px;
+  color: #2E7D32;
+  line-height: 1.7;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background-color: #1A2B4C;
+  color: #ddd;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  .site-header h1 {
+    font-size: 1.7rem;
+  }
+  .quiz-card {
+    padding: 25px 18px;
+  }
+  .quiz-card h2 {
+    font-size: 1.5rem;
+  }
+  .question-text {
+    font-size: 1.1rem;
+  }
+  .option {
+    font-size: 1rem;
+    padding: 12px 14px;
+  }
+}
+/* ===== LESSON PAGE STYLES ===== */
+
+.lesson-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(26, 43, 76, 0.1);
+  padding: 45px;
+  margin: 40px 0;
+  border-top: 5px solid #C5A059;
+}
+
+.lesson-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.badge {
+  background: #1A2B4C;
+  color: #C5A059;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.lesson-card h2 {
+  color: #1A2B4C;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.lesson-intro {
+  font-size: 1.15rem;
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0ece2;
+}
+
+.lesson-section {
+  margin-bottom: 35px;
+}
+
+.lesson-section h3 {
+  color: #1B5E20;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  padding-right: 12px;
+  border-right: 4px solid #C5A059;
+}
+
+.lesson-section p {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Arabic text */
+.arabic {
+  font-family: 'Traditional Arabic', 'Scheherazade', serif;
+  font-size: 1.5rem;
+  color: #1A2B4C;
+  font-weight: 700;
+}
+
+.arabic.big {
+  font-size: 2.5rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Example list */
+.example-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.example-list li {
+  background: #FDFBF7;
+  border-right: 4px solid #C5A059;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Compare grid */
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.compare-box {
+  background: #FDFBF7;
+  border: 2px solid #C5A059;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.compare-label {
+  color: #1A2B4C;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+.compare-meaning {
+  color: #2E7D32;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Tip box */
+.tip {
+  background: #FFF8E1;
+  border-right: 4px solid #C5A059;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  margin-top: 15px;
+}
+
+/* Vocabulary table */
+.vocab-section {
+  background: #E8F5E9;
+  border: 3px solid #2E7D32;
+  border-radius: 14px;
+  padding: 30px;
+}
+
+.vocab-section h3 {
+  color: #1B5E20;
+  border-right-color: #2E7D32;
+}
+
+.vocab-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.vocab-table th {
+  background: #2E7D32;
+  color: #fff;
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.vocab-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #C8E6C9;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.vocab-table tr:last-child td {
+  border-bottom: none;
+}
+
+.vocab-table tr:hover {
+  background: #F1F8E9;
+}
+
+/* CTA */
+.lesson-cta {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px dashed #C5A059;
+}
+
+.lesson-cta p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1A2B4C;
+  margin-bottom: 18px;
+}
+
+.btn-cta {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1B5E20;
+  color: #fff;
+  padding: 16px 40px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: all 0.2s;
+}
+
+.btn-cta:hover {
+  background-color: #C5A059;
+  color: #1A2B4C;
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .lesson-card {
+    padding: 25px 18px;
+  }
+  .lesson-card h2 {
+    font-size: 1.5rem;
+  }
+  .lesson-section h3 {
+    font-size: 1.2rem;
+  }
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+  .vocab-section {
+    padding: 18px;
+  }
+  .arabic.big {
+    font-size: 2rem;
+  }
+}
+/* Fix for Roman Urdu/English text direction */
+.lesson-section p, 
+.lesson-section h3, 
+.lesson-intro, 
+.lesson-cta p,
+.quiz-desc,
+.question-text,
+.option {
+  direction: ltr;
+  text-align: right; /* Text right side se shuru hoga par English format mein */
+}
+
+/* Arabic text ko wapas RTL rakhein */
+.arabic, .vocab-table th, .vocab-table td {
+  direction: rtl;
+}
+/* ===== HOME PAGE STYLES ===== */
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #1A2B4C 0%, #2a4270 100%);
+  color: #fff;
+  padding: 50px 40px;
+  border-radius: 14px;
+  text-align: center;
+  margin: 40px 0;
+  box-shadow: 0 8px 30px rgba(26, 43, 76, 0.2);
+}
+
+.hero-section h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #C5A059;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.btn-primary-large {
+  display: inline-block;
+  background: #C5A059;
+  color: #1A2B4C;
+  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-large:hover {
+  background: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Jild Section */
+.section-title {
+  text-align: center;
+  color: #1A2B4C;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #C5A059;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.jild-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.jild-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Jild Cards */
+.jild-card {
+  background: #fff;
+  border: 2px solid #f0ece2;
+  border-top: 6px solid #1B5E20; /* Green top border */
+  border-radius: 14px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  position: relative;
+  text-align: center;
+}
+
+.jild-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(27, 94, 32, 0.15);
+}
+
+.jild-number {
+  background: #C5A059;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 auto 15px auto;
+}
+
+.jild-card h3 {
+  color: #1A2B4C;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.jild-card p {
+  color: #666;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  min-height: 50px;
+}
+
+.btn-card {
+  display: inline-block;
+  background: #1B5E20;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.btn-card:hover {
+  background: #2E7D32;
+}
+
+/* Disabled / Coming Soon Cards */
+.disabled-card {
+  opacity: 0.7;
+  border-top-color: #999;
+}
+
+.disabled-btn {
+  background: #ccc;
+  cursor: not-allowed;
+}
+/* ===== Compiler Name Style ===== */
+.compiler-name {
+  color: #A5D6A7; /* Halka green color taake blue background par chamke */
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 8px;
+  letter-spacing: 0.5px;
+  font-style: italic;
+  direction: ltr; /* Taake English theek dikhe */
+}
